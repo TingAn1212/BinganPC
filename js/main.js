@@ -1,4 +1,4 @@
-/* PowerCyclePC — main.js
+/* Bingan PCs — main.js
    Entry point for site behavior. Keep individual features in separate files
    (see js/modules/) and import or include them here as the site grows. */
 
@@ -10,36 +10,60 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Smooth-scroll for in-page anchor links.
+  // A bare "#" is not a valid selector and used to throw on every placeholder
+  // link, so skip anything without a real target.
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const target = document.querySelector(link.getAttribute("href"));
-      if (target) {
+    const href = link.getAttribute("href");
+    if (!href || href === "#") return;
+
+    let target = null;
+    try {
+      target = document.querySelector(href);
+    } catch {
+      return;
+    }
+
+    if (target) {
+      link.addEventListener("click", (event) => {
         event.preventDefault();
         target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
+      });
+    }
   });
 
-  // Mobile Navigation Toggle / Dropdown
+  // Mobile navigation dropdown.
   const navToggle = document.getElementById("navToggle");
   const mainNav = document.querySelector(".main-nav");
-  
+
   if (navToggle && mainNav) {
     const arrow = navToggle.querySelector(".nav-arrow");
-    
-    navToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("is-open");
-      
-      // Toggle aria-expanded for accessibility
-      navToggle.setAttribute("aria-expanded", 
-        mainNav.classList.contains("is-open") ? "true" : "false"
-      );
-      
-      // Flip the arrow icon
+
+    const setOpen = (open) => {
+      mainNav.classList.toggle("is-open", open);
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
       if (arrow) {
-        arrow.style.transform = mainNav.classList.contains("is-open") 
-          ? "rotate(180deg)" 
-          : "rotate(0deg)";
+        arrow.style.transform = open ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    };
+
+    navToggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!mainNav.classList.contains("is-open"));
+    });
+
+    // Close after picking a link, on Escape, or on a click outside the menu.
+    mainNav.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setOpen(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!mainNav.contains(event.target) && !navToggle.contains(event.target)) {
+        setOpen(false);
       }
     });
   }

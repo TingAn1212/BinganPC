@@ -3,273 +3,352 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PowerCyclePC — Our three PC tiers: Everyday (S$799), Performance (S$999), and Enthusiast (S$1,099+). Custom RGB and build options available." />
-  <title>Products — PowerCyclePC</title>
+  <title>Builds &amp; pricing — Bingan PCs</title>
+  <meta name="description" content="Three gaming PC tiers from S$900: RTX 3060, 3070 and 3080 builds with a new motherboard, 16GB RAM and 1TB NVMe. Only the CPU and GPU are second-hand." />
+  <link rel="canonical" href="https://devastator165.github.io/PowerCyclePC/products.html" />
+  <meta name="theme-color" content="#0b0b0d" />
 
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  <meta property="og:title" content="Builds &amp; pricing — Bingan PCs" />
+  <meta property="og:description" content="RTX 3060, 3070 and 3080 builds from S$900. 1TB NVMe standard, only the CPU and GPU are used." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">PowerCycle<span>PC</span></a>
-      
-      <!-- Hamburger Toggle for Mobile -->
+      <a href="index.html" class="brand">Bingan <span>PCs</span></a>
+
       <nav class="nav-toggle" aria-label="Menu toggle">
-        <button type="button" id="navToggle">
+        <button type="button" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
           <img src="assets/images/down arrow.png" alt="" class="nav-arrow" />
         </button>
       </nav>
-      
-      <nav class="main-nav" aria-label="Main navigation">
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="products.html" aria-current="page">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <!-- <a href="about.html">About Us</a> -->
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Products Hero -->
-    <section class="hero products-hero section-head">
+  <main id="main">
+    <section class="hero hero--compact">
       <div class="container">
         <span class="eyebrow">Our builds</span>
-        <h1>Choose Your Tier</h1>
-        <p class="lead description">Three tiers, one workshop — pick your PC based on how you play.</p>
+        <h1>Choose your tier</h1>
+        <p class="lead">Three starting points, one workshop. Every build ships with a new motherboard, 16GB of RAM and a 1TB NVMe — only the CPU and GPU are second-hand.</p>
+        <div class="hero-actions">
+          <a href="build.html" class="btn btn-primary">Build yours</a>
+          <a href="warranty.html" class="btn btn-outline">How our warranty works</a>
+        </div>
       </div>
     </section>
 
-    <!-- Products Grid -->
-    <section class="section">
-      <div class="container">    
+    <section class="section section--tight-top">
+      <div class="container">
         <div class="tier-grid" id="tier-grid">
-          
-          <!-- Tier 1 Card -->
-          <article class="product-card tier-1">
+
+          <article class="product-card product-card--media" id="tier-1">
+            <figure class="card-media">
+              <img src="assets/images/builds/tier-1.jpg" alt="Black Aqua Uno case with panoramic glass and blue RGB lighting"
+                   width="720" height="450" loading="lazy" />
+            </figure>
             <div class="card-header">
-              <h2>
-                Tier 1 · Everyday
-              </h2>
-              <p class="price">S$799</p>
+              <span class="card-kicker">Tier 1 · Everyday</span>
+              <p class="price">S$900</p>
+              <p class="card-sub">1080p high refresh, or 1440p at 60fps</p>
             </div>
 
-            <!-- Specs -->
             <table class="product-specs">
-              <tr>
-                <th>Graphics</th>
-                <td>RTX 3060 / RTX 2070 Super</td>
-              </tr>
-              <tr>
-                <th>Processor</th>
-                <td>Ryzen 5 3600 or better</td>
-              </tr>
-              <tr>
-                <th>Memory</th>
-                <td>16 GB DDR4</td>
-              </tr>
-              <tr>
-                <th>Storage</th>
-                <td>512 GB NVMe SSD<br><small style="color: var(--color-gold); font-style: italic;">(Upgrade to 1 TB for +S$40)</small></td>
-              </tr>
-              <tr>
-                <th>Power</th>
-                <td>650 W</td>
-              </tr>
-              <tr>
-                <th>Wi-Fi</th>
-                <td>Yes</td>
-              </tr>
+              <tbody>
+                <tr><th scope="row">Graphics</th><td>RTX 3060 12GB <span class="alt">or RTX 2070 Super</span></td></tr>
+                <tr><th scope="row">Processor</th><td>Ryzen 5 3600 <span class="alt">or better</span></td></tr>
+                <tr><th scope="row">Memory</th><td>16GB DDR4</td></tr>
+                <tr><th scope="row">Storage</th><td>1TB NVMe SSD <span class="incl">included</span></td></tr>
+                <tr><th scope="row">Power</th><td>650W</td></tr>
+                <tr><th scope="row">Case</th><td>Aqua Uno</td></tr>
+                <tr><th scope="row">Wi-Fi</th><td>Yes</td></tr>
+              </tbody>
             </table>
 
-            <!-- Gameplay -->
             <div class="gameplay-section">
+              <h3 class="gameplay-title">What it runs</h3>
               <ul class="gameplay-list">
-                <li><strong>FC 27 / FIFA</strong> · <span class="price fps">1440p · 120+ fps · high</span></li>
-                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong> · <span class="price fps">1080p · 144+ fps</span></li>
-                <li><strong>Apex / Fortnite / Overwatch 2</strong> · <span class="price fps">1080p · 60–100 fps</span></li>
-                <li><strong>GTA V / Minecraft / Roblox / Genshin / WuWa</strong> · <span class="price fps">1080p · 60+ fps high</span></li>
-                <li><strong>Heavy AAA (Cyberpunk, Alan Wake 2)</strong> · <span class="price fps">1080p · 60 fps medium</span></li>
+                <li><strong>FC 27 / FIFA</strong><span>1440p · 120+ fps · high</span></li>
+                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong><span>1080p · 144+ fps</span></li>
+                <li><strong>Apex / Fortnite / Overwatch 2</strong><span>1080p · 60–100 fps</span></li>
+                <li><strong>GTA V / Minecraft / Genshin / WuWa</strong><span>1080p · 60+ fps · high</span></li>
+                <li><strong>Cyberpunk / Alan Wake 2</strong><span>1080p · 60 fps · medium</span></li>
               </ul>
-
-              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: First gaming PC, students, 1440p 60Hz or 1080p high-refresh</p>
-
-              <div class="product-note">
-                <p style="margin: 0; line-height: 1.5;">
-                  🔥 Ryzen 3600 is a great budget CPU option that is capable for most games!
-                </p>
-              </div>
             </div>
+
+            <p class="card-foot">Good for: a first gaming PC, a student desk, 1440p 60Hz or 1080p high refresh.</p>
+            <a href="contact.html" class="btn btn-outline btn-block">Ask about Tier 1</a>
           </article>
 
-          <!-- Tier 2 Card -->
-          <article class="product-card tier-2">
+          <article class="product-card product-card--featured product-card--media" id="tier-2">
+            <span class="card-badge">Most picked</span>
+            <figure class="card-media">
+              <img src="assets/images/builds/tier-2.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, black"
+                   width="720" height="450" loading="lazy" />
+            </figure>
             <div class="card-header">
-              <h2>
-                Tier 2 · Performance
-              </h2>
-              <p class="price">S$999</p>
+              <span class="card-kicker">Tier 2 · Performance</span>
+              <p class="price">S$1,050</p>
+              <p class="card-sub">1440p high refresh, and it'll stay that way</p>
             </div>
 
-            <!-- Specs -->
             <table class="product-specs">
-              <tr>
-                <th>Graphics</th>
-                <td>RTX 3070 / RTX 2080 Super</td>
-              </tr>
-              <tr>
-                <th>Processor</th>
-                <td>Ryzen 5 5600 or better</td>
-              </tr>
-              <tr>
-                <th>Memory</th>
-                <td>16 GB DDR4</td>
-              </tr>
-              <tr>
-                <th>Storage</th>
-                <td>512 GB NVMe SSD<br><small style="color: var(--color-gold); font-style: italic;">(Upgrade to 1 TB for +S$40)</small></td>
-              </tr>
-              <tr>
-                <th>Power</th>
-                <td>750 W</td>
-              </tr>
-              <tr>
-                <th>Wi-Fi</th>
-                <td>Yes</td>
-              </tr>
+              <tbody>
+                <tr><th scope="row">Graphics</th><td>RTX 3070 8GB <span class="alt">or RTX 2080 Super</span></td></tr>
+                <tr><th scope="row">Processor</th><td>Ryzen 5 5600 <span class="alt">or better</span></td></tr>
+                <tr><th scope="row">Memory</th><td>16GB DDR4</td></tr>
+                <tr><th scope="row">Storage</th><td>1TB NVMe SSD <span class="incl">included</span></td></tr>
+                <tr><th scope="row">Power</th><td>650W</td></tr>
+                <tr><th scope="row">Case</th><td>DarkFlash DS900M <span class="alt">or Aqua Uno −S$5</span></td></tr>
+                <tr><th scope="row">Lighting</th><td>RGB controller included</td></tr>
+              </tbody>
             </table>
 
-            <!-- Gameplay -->
             <div class="gameplay-section">
-              <ul class="gameplay-list" style="margin: 0; padding-left: 0;">
-                <li><strong>FC 27 / FIFA</strong> · <span class="price fps">1440p · 150+ fps · high</span></li>
-                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong> · <span class="price fps">1440p · 144+ fps</span></li>
-                <li><strong>Apex / Fortnite / Overwatch 2</strong> · <span class="price fps">1440p · 100+ fps</span></li>
-                <li><strong>GTA V / Minecraft / Roblox / Genshin / WuWa</strong> · <span class="price fps">1440p · 60+ fps high</span></li>
-                <li><strong>Heavy AAA (Cyberpunk, Alan Wake 2)</strong> · <span class="price fps">1440p · 60 fps high</span></li>
+              <h3 class="gameplay-title">What it runs</h3>
+              <ul class="gameplay-list">
+                <li><strong>FC 27 / FIFA</strong><span>1440p · 150+ fps · high</span></li>
+                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong><span>1440p · 144+ fps</span></li>
+                <li><strong>Apex / Fortnite / Overwatch 2</strong><span>1440p · 100+ fps</span></li>
+                <li><strong>GTA V / Minecraft / Genshin / WuWa</strong><span>1440p · 60+ fps · high</span></li>
+                <li><strong>Cyberpunk / Alan Wake 2</strong><span>1440p · 60 fps · high</span></li>
               </ul>
-
-              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: 1440p monitor, wants it to last</p>
-
-              <div class="product-note">
-                <p style="margin: 0; line-height: 1.5;">
-                  💡512 GB is plenty — Windows plus FC 27 is about 140 GB, so there is room for a dozen more games.
-                </p>
-              </div>
-
             </div>
 
+            <p class="card-foot">Good for: a 1440p monitor, and a machine you want to keep for years.</p>
+            <a href="contact.html" class="btn btn-primary btn-block">Ask about Tier 2</a>
           </article>
 
-          <!-- Tier 3 Card -->
-          <article class="product-card tier-3">
+          <article class="product-card product-card--media" id="tier-3">
+            <figure class="card-media">
+              <img src="assets/images/builds/tier-3.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, white"
+                   width="900" height="1200" loading="lazy" />
+            </figure>
             <div class="card-header">
-              <h2>
-                Tier 3 · Enthusiast
-              </h2>
-              <p class="price" style="color: var(--color-gold);">S$1,099 – 1,199</p>
+              <span class="card-kicker">Tier 3 · Enthusiast</span>
+              <p class="price">S$1,300</p>
+              <p class="card-sub">High-refresh 1440p, streaming and heavier workloads</p>
             </div>
 
-            <!-- Specs -->
             <table class="product-specs">
-              <tr>
-                <th>Graphics</th>
-                <td>RTX 3080 10 GB</td>
-              </tr>
-              <tr>
-                <th>Processor</th>
-                <td>Ryzen 7 5700X or better</td>
-              </tr>
-              <tr>
-                <th>Memory</th>
-                <td>16 GB DDR4</td>
-              </tr>
-              <tr>
-                <th>Storage</th>
-                <td><span style="color: var(--color-gold);">1 TB NVme SSD</span><br><div style="display: inline-block; height: 1.25rem;"></div></td>
-              </tr>
-              <tr>
-                <th>Power</th>
-                <td>850 W Gold</td>
-              </tr>
-              <tr>
-                <th>Wi-Fi</th>
-                <td>Yes</td>
-              </tr>
+              <tbody>
+                <tr><th scope="row">Graphics</th><td>RTX 3080 10GB</td></tr>
+                <tr><th scope="row">Processor</th><td>Ryzen 5 5600X <span class="alt">or better</span></td></tr>
+                <tr><th scope="row">Memory</th><td>16GB DDR4</td></tr>
+                <tr><th scope="row">Storage</th><td>1TB NVMe SSD <span class="incl">included</span></td></tr>
+                <tr><th scope="row">Power</th><td>750W</td></tr>
+                <tr><th scope="row">Case</th><td>DarkFlash DS900M <span class="alt">or Aqua Uno −S$5</span></td></tr>
+                <tr><th scope="row">Lighting</th><td>RGB controller included</td></tr>
+              </tbody>
             </table>
 
-            <!-- Gameplay -->
             <div class="gameplay-section">
-              <ul class="gameplay-list" style="margin: 0; padding-left: 0;">
-                <li><strong>FC 27 / FIFA</strong> · <span class="price fps">1440p · 190+ fps · high</span></li>
-                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong> · <span class="price fps">1440p · 240+ fps</span></li>
-                <li><strong>Apex / Fortnite / Overwatch 2</strong> · <span class="price fps">1440p · 144+ fps</span></li>
-                <li><strong>GTA V / Minecraft / Roblox / Genshin / WuWa</strong> · <span class="price fps">1440p · 100+ fps high</span></li>
-                <li><strong>Heavy AAA (Cyberpunk, Alan Wake 2)</strong> · <span class="price fps">1440p · 60–100 fps high</span></li>
+              <h3 class="gameplay-title">What it runs</h3>
+              <ul class="gameplay-list">
+                <li><strong>FC 27 / FIFA</strong><span>1440p · 190+ fps · high</span></li>
+                <li><strong>Valorant / CS2 / Dota 2 / LoL</strong><span>1440p · 240+ fps</span></li>
+                <li><strong>Apex / Fortnite / Overwatch 2</strong><span>1440p · 144+ fps</span></li>
+                <li><strong>GTA V / Minecraft / Genshin / WuWa</strong><span>1440p · 100+ fps · high</span></li>
+                <li><strong>Cyberpunk / Alan Wake 2</strong><span>1440p · 60–100 fps · high</span></li>
               </ul>
-
-              <p style="margin-top: var(--space-2); color: var(--color-text-dim); font-size: 0.9rem;">Good for: High-refresh 1440p, streaming</p>
-
             </div>
 
+            <p class="card-foot">Good for: a high-refresh 1440p setup, streaming, or video work.</p>
+            <a href="contact.html" class="btn btn-outline btn-block">Ask about Tier 3</a>
           </article>
 
         </div>
+
+        <div class="cta-inline">
+          <p>Nothing here quite fits? Start from a tier and change every part.</p>
+          <a href="build.html" class="btn btn-primary">Build yours</a>
+        </div>
+
+        <p class="footnote">FPS figures are from our own bench at each resolution noted; patches and driver updates move them a little. Tiers list the parts we build with most often — if a different card or CPU suits you better, say so and we'll quote it.</p>
       </div>
     </section>
 
-    <!-- Customization Options -->
+    <!-- Case comparison -->
     <section class="section">
       <div class="container">
-        <span class="eyebrow">Customization</span>
-        <h2>Further Customization Available</h2>
-        <p class="lead">Every PC can be tailored to your exact needs — tell us what you want!</p>
+        <div class="section-head">
+          <span class="eyebrow">Pick your case</span>
+          <h2>Small on your desk, or room to breathe</h2>
+          <p class="lead">Both cases are new in every build. The difference is size, airflow and how the lighting works — not quality.</p>
+        </div>
 
-        <div class="custom-section-grid">
-          <article class="custom-card">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🌈</div>
-            <h3 style="margin-top: 0;">RGB Lighting</h3>
-            <p class="lead" style="margin-block-start: var(--space-1);">Custom RGB strips and LED lighting options available for your perfect build!</p>
+        <div class="case-compare">
+
+          <article class="case-card">
+            <figure class="case-card__media">
+              <img src="assets/images/builds/tier-1.jpg" alt="Aqua Uno compact case with panoramic glass front and three ARGB fans" width="1200" height="900" loading="lazy" />
+              <span class="case-card__tag">Lite</span>
+            </figure>
+            <div class="case-card__body">
+              <h3>OKINOS Aqua Uno</h3>
+              <p class="case-card__sub">Tier 1 · also a −S$5 option on Tiers 2 and 3</p>
+              <dl class="case-specs">
+                <div><dt>Size</dt><dd>315 × 210 × 395 mm</dd></div>
+                <div><dt>Fans</dt><dd>3 × 120mm ARGB, pre-installed</dd></div>
+                <div><dt>Glass</dt><dd>Panoramic front and side</dd></div>
+                <div><dt>Lighting</dt><dd>Standard RGB rings</dd></div>
+              </dl>
+              <p class="case-card__for"><strong>Best for:</strong> a desk, a small room, or a lower-power build where the 3060 isn't working hard enough to need the airflow.</p>
+            </div>
           </article>
 
-          <article class="custom-card">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">📦</div>
-            <h3>Casing Options</h3>
-            <p class="lead" style="margin-block-start: var(--space-1);">Choose from a variety of cases — transparent tempered glass, mesh front, compact form factor, or full tower!</p>
+          <article class="case-card case-card--featured">
+            <figure class="case-card__media">
+              <img src="assets/images/builds/tier-2.jpg" alt="DarkFlash DS900M panoramic tempered-glass case with ARGB fans" width="1200" height="900" loading="lazy" />
+              <span class="case-card__tag">Standard on Tiers 2 and 3</span>
+            </figure>
+            <div class="case-card__body">
+              <h3>DarkFlash DS900M</h3>
+              <p class="case-card__sub">Tier 2 and Tier 3 · +S$10 on Tier 1</p>
+              <dl class="case-specs">
+                <div><dt>Size</dt><dd>434 × 218 × 414 mm</dd></div>
+                <div><dt>Fans</dt><dd>Up to 9 × 120mm; 6 ARGB fitted</dd></div>
+                <div><dt>Glass</dt><dd>270° pillar-less front and side</dd></div>
+                <div><dt>Lighting</dt><dd>Infinity-mirror ARGB fans</dd></div>
+              </dl>
+              <p class="case-card__for"><strong>Best for:</strong> the 3070 and 3080 builds. More case volume and twice the fans means cooler air in, lower fan speeds, and less noise under load.</p>
+            </div>
           </article>
 
-          <article class="custom-card">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">💾</div>
-            <h3>Secondary Storage</h3>
-            <p class="lead" style="margin-block-start: var(--space-1);">Add extra NVMe SSDs or HDD/SSD hybrid storage for your media library.</p>
-          </article>
+        </div>
 
-          <article class="custom-card">
-            <div style="font-size: 1.5rem; margin-bottom: var(--space-2);">🔌</div>
-            <h3>Other Custom Needs</h3>
-            <p class="lead" style="margin-block-start: var(--space-1);">Specific GPU sizes, USB-C ports, or any other request — just let us know!</p>
+        <p class="footnote">Bigger case doesn't make a GPU faster on its own — it keeps it from throttling, which is where the frames actually go. On a Tier 1 build the Aqua Uno has plenty of headroom; on a 3080 the DS900M is the honest choice.</p>
+      </div>
+    </section>
+
+    <!-- Lighting comparison -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Lighting</span>
+          <h2>Standard, or set up to your taste</h2>
+        </div>
+
+        <div class="split-2">
+          <article class="panel">
+            <h3 class="panel__title">Standard RGB</h3>
+            <ul class="checklist">
+              <li>Whatever the fans ship with — colour and brightness adjusted</li>
+              <li>Set once before handover, no software to learn</li>
+              <li>Included in every tier</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h3 class="panel__title">Customised RGB <span class="panel__price">+S$30</span></h3>
+            <ul class="checklist">
+              <li>Fans, memory and strips synced as one scene</li>
+              <li>Music sync, breathing, colour cycles and static themes</li>
+              <li>Set up and demonstrated before you take it home</li>
+            </ul>
+          </article>
+        </div>
+        <p class="footnote">The DS900M's infinity-mirror fans already look different to plain rings — that effect is built into the case, not the service.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Side by side</span>
+          <h2>Compare the three</h2>
+        </div>
+        <div class="table-scroll">
+          <table class="compare">
+            <thead>
+              <tr>
+                <th scope="col">Spec</th>
+                <th scope="col">Tier 1 · Everyday</th>
+                <th scope="col" class="is-featured">Tier 2 · Performance</th>
+                <th scope="col">Tier 3 · Enthusiast</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Price</th><td class="price-cell">S$900</td><td class="price-cell is-featured">S$1,050</td><td class="price-cell">S$1,300</td></tr>
+              <tr><th scope="row">Graphics</th><td>RTX 3060 12GB</td><td>RTX 3070 8GB</td><td>RTX 3080 10GB</td></tr>
+              <tr><th scope="row">Processor</th><td>Ryzen 5 3600</td><td>Ryzen 5 5600</td><td>Ryzen 5 5600X</td></tr>
+              <tr><th scope="row">Memory</th><td>16GB DDR4</td><td>16GB DDR4</td><td>16GB DDR4</td></tr>
+              <tr><th scope="row">Storage</th><td>1TB NVMe</td><td>1TB NVMe</td><td>1TB NVMe</td></tr>
+              <tr><th scope="row">Power</th><td>650W</td><td>650W</td><td>750W</td></tr>
+              <tr><th scope="row">Case</th><td>Aqua Uno</td><td>DarkFlash DS900M</td><td>DarkFlash DS900M</td></tr>
+              <tr><th scope="row">Best for</th><td>1080p high refresh</td><td>1440p high refresh</td><td>1440p 240Hz, streaming</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Options</span>
+          <h2>Change anything</h2>
+          <p class="lead">These are the ones people ask for most. The price shown is what it adds to or takes off the tier price.</p>
+        </div>
+
+        <div class="option-grid">
+          <article class="option-card">
+            <h3>Storage</h3>
+            <p class="option-price">1TB included</p>
+            <p>Every tier already ships with 1TB NVMe — there's no upgrade to pay for. Prefer 500GB and a lower price? That takes S$40 off.</p>
+          </article>
+          <article class="option-card">
+            <h3>RGB lighting</h3>
+            <p class="option-price">+S$30</p>
+            <p>RGB strips and fan lighting, synced and set up before handover. Tier 2 and 3 already include the controller.</p>
+          </article>
+          <article class="option-card">
+            <h3>Case</h3>
+            <p class="option-price">+S$10</p>
+            <p>Tiers 2 and 3 ship in the DarkFlash DS900M and can drop to the Aqua Uno for S$5 less. Tier 1 comes in the Aqua Uno — moving it up to the DS900M is S$10.</p>
+          </article>
+          <article class="option-card">
+            <h3>Something else</h3>
+            <p class="option-price">Ask</p>
+            <p>A specific GPU, more RAM, a second drive, USB-C on the front — tell us the goal and we'll quote the parts.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section section-alt cta-section-alt">
-      <div class="container">
+    <section class="section section-cta">
+      <div class="container cta">
         <span class="eyebrow">Get a quote</span>
-        <h2 style="margin: 0 auto var(--space-1);">Ready to build or upgrade?</h2>
-        <p style="margin: 0 auto 0; max-width: 52ch;">Tell us your goals — we'll match you with the right hardware and pricing.</p>
-        
-        <a href="contact.html" class="cta-buttons hero-btn">Get a Quote!</a>
-
+        <h2>Ready to build?</h2>
+        <p class="lead">Tell us the games and the budget — we'll come back with a fixed price and an honest opinion on whether it's worth it.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Get a quote</a>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p><span class="brand-footer">PowerCyclePC</span> · &copy; <span id="year"></span> All rights reserved.</p>
+    <div class="container footer-inner">
+      <p><span class="brand-footer">Bingan <span>PCs</span></span> · &copy; <span id="year"></span> All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 

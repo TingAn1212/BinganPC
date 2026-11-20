@@ -1,97 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — PowerCyclePC</title>
+  <title>Contact — Bingan PCs</title>
+  <meta name="description" content="Get a quote for a custom gaming PC, an upgrade or a repair. Message us on Carousell, WhatsApp or email — we reply with a fixed price, not a range." />
+  <link rel="canonical" href="https://devastator165.github.io/PowerCyclePC/contact.html" />
+  <meta name="theme-color" content="#0b0b0d" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">PowerCycle<span>PC</span></a>
-      
-      <!-- Hamburger Toggle for Mobile -->
+      <a href="index.html" class="brand">Bingan <span>PCs</span></a>
+
       <nav class="nav-toggle" aria-label="Menu toggle">
-        <button type="button" id="navToggle">
+        <button type="button" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
           <img src="assets/images/down arrow.png" alt="" class="nav-arrow" />
         </button>
       </nav>
-      
-      <nav class="main-nav" aria-label="Main navigation">
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
         <a href="contact.html" aria-current="page">Contact</a>
-        <!-- <a href="about.html">About Us</a> -->
       </nav>
     </div>
   </header>
 
-<main>
-  <section class="section">
-    <div class="container section-head hero">
-      <span class="eyebrow">Get in touch</span>
-      <h1>Contact</h1>
-      <p class="lead">Questions, quotes, or a broken machine — drop us a line and we'll get back to you.</p>
-    </div>
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Contact</h1>
+        <p class="lead">Questions, quotes, or a machine that won't boot — message us and we'll get back to you. The more you tell us up front, the more useful the first reply is.</p>
+      </div>
+    </section>
 
-    <div id="contact-container" class="contact-stack">
-      <!-- Carousell Contact -->
-      <article class="contact-card">
-        <header class="card-image-wrap">
-          <img src="assets/images/carousell.png" alt="Carousell logo" />
-        </header>
-        <div class="card-body">
-          <span class="eyebrow small">Selling Your PC?</span>
-          <h2>Carousell</h2>
-          <p class="lead">temporary placeholder</p>
-          <a href="#" class="btn btn-primary" aria-label="Redirect to Carousell listing page">00000000</a>
+    <!--
+      CONTACT DETAILS — three values to fill in:
+        1. Carousell shop URL   -> the href on the Carousell card
+        2. Email address        -> mailto: on the Email card
+        3. WhatsApp number      -> https://wa.me/65XXXXXXXX on the WhatsApp card
+      Everything else on this page is finished.
+    -->
+    <section class="section section--tight-top">
+      <div class="container">
+        <div class="contact-stack" id="contact-container">
+
+          <article class="contact-card">
+            <header class="card-image-wrap">
+              <img src="assets/images/carousell.png" alt="Carousell" />
+            </header>
+            <div class="card-body">
+              <span class="eyebrow small">Browse and message</span>
+              <h2>Carousell</h2>
+              <p class="lead">See what's on the bench and message us there — easiest if you're already shopping around.</p>
+              <!-- TODO: replace # with the Carousell shop URL -->
+              <a href="#" class="btn btn-primary" rel="noopener">Open our Carousell</a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <header class="card-image-wrap">
+              <img src="assets/images/whatsapp.png" alt="WhatsApp" />
+            </header>
+            <div class="card-body">
+              <span class="eyebrow small">Fastest reply</span>
+              <h2>WhatsApp</h2>
+              <p class="lead">For quotes, photos of a build in progress, or a quick question about a part.</p>
+              <!-- TODO: replace # with https://wa.me/65XXXXXXXX -->
+              <a href="#" class="btn btn-primary" rel="noopener">Message on WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="contact-card">
+            <header class="card-image-wrap">
+              <img src="assets/images/email.png" alt="Email" />
+            </header>
+            <div class="card-body">
+              <span class="eyebrow small">Longer enquiries</span>
+              <h2>Email</h2>
+              <p class="lead">Best for invoices, bulk orders, or anything with attachments.</p>
+              <!-- TODO: replace # with mailto:your@address -->
+              <a href="#" class="btn btn-primary">Send an email</a>
+            </div>
+          </article>
+
         </div>
-      </article>
+      </div>
+    </section>
 
-      <!-- Email Contact -->
-      <article class="contact-card">
-        <header class="card-image-wrap">
-          <img src="assets/images/email.png" alt="Email logo" />
-        </header>
-        <div class="card-body">
-          <span class="eyebrow small">Send us an email</span>
-          <h2>Email</h2>
-          <p class="lead">temporary placeholder</p>
-          <a href="#" class="btn btn-primary" aria-label="Redirect to Email app or compose window">00000000</a>
+    <section class="section">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow">Before you message</span>
+          <h2>What helps us quote fast</h2>
         </div>
-      </article>
+        <ul class="checklist checklist--wide">
+          <li><strong>The games you actually play</strong> — a title list beats a spec list.</li>
+          <li><strong>Your monitor</strong> — resolution and refresh rate decide more than anything else.</li>
+          <li><strong>Your budget</strong> — a real number, so we can tell you what it does and doesn't buy.</li>
+          <li><strong>Anything you already own</strong> — a case, a PSU, a drive we can reuse.</li>
+        </ul>
+      </div>
+    </section>
 
-      <!-- WhatsApp Contact -->
-      <article class="contact-card">
-        <header class="card-image-wrap">
-          <img src="assets/images/whatsapp.png" alt="WhatsApp logo" />
-        </header>
-        <div class="card-body">
-          <span class="eyebrow small">Chat with us</span>
-          <h2>WhatsApp</h2>
-          <p class="lead">temporary placeholder</p>
-          <a href="#" class="btn btn-primary" aria-label="Redirect to WhatsApp chat">00000000</a>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="payment-wrapper">
+          <span class="eyebrow">Payment &amp; collection</span>
+          <h2>How paying works</h2>
+          <p class="lead">A deposit secures your build once the quote is agreed — it's what we use to buy the parts. The balance is due when you collect and the machine is running in front of you.</p>
+          <p>Nothing is ordered until you've seen the fixed price and said yes. If a part turns out to be unavailable or dearer than quoted, we come back to you before spending anything.</p>
         </div>
-      </article>
-    </div>
 
-    <!-- Separator Divider -->
-    <div class="contact-separator"></div>
+        <div class="info-grid">
+          <article class="info-card">
+            <h3>Timeline</h3>
+            <p>About a week from parts in hand, depending on the case and how busy the bench is. We'll give you a date with the quote.</p>
+          </article>
+          <article class="info-card">
+            <h3>Collection</h3>
+            <p>By arrangement, in Singapore. We send the address with your quote and hand the machine over running, not boxed.</p>
+          </article>
+          <article class="info-card">
+            <h3>After handover</h3>
+            <p>If something isn't right, tell us. Repairs, upgrades and cleaning are all part of what the workshop does.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-    <!-- Payment Section -->
-    <div class="payment-wrapper">
-      <h2 class="section-head-title">Payment</h2>
-      <p class="lead large">temporary placeholder</p>
-      <p>temporary placeholder</p>
-    </div>
-
-  </section>
-</main>
+    <section class="section section-cta">
+      <div class="container cta">
+        <span class="eyebrow">Still deciding?</span>
+        <h2>Ask us what you'd actually need</h2>
+        <p class="lead">Tell us the games and the monitor. We'll tell you which tier is enough, which is overkill, and where the money is better spent.</p>
+        <a href="products.html" class="btn btn-primary btn-lg">Compare the tiers</a>
+      </div>
+    </section>
+  </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p><span class="brand-footer">PowerCyclePC</span> · &copy; <span id="year"></span> All rights reserved.</p>
+    <div class="container footer-inner">
+      <p><span class="brand-footer">Bingan <span>PCs</span></span> · &copy; <span id="year"></span> All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 

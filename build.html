@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Build your PC — Bingan PCs</title>
+  <meta name="description" content="Configure your gaming PC part by part: pick a tier, storage, lighting, case and Windows. See the price change as you go, then send us the spec." />
+  <link rel="canonical" href="https://devastator165.github.io/PowerCyclePC/build.html" />
+  <meta name="theme-color" content="#0b0b0d" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Bingan <span>PCs</span></a>
+
+      <nav class="nav-toggle" aria-label="Menu toggle">
+        <button type="button" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
+          <img src="assets/images/down arrow.png" alt="" class="nav-arrow" />
+        </button>
+      </nav>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="build.html" aria-current="page">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--compact">
+      <div class="container">
+        <span class="eyebrow">Configurator</span>
+        <h1>Build yours</h1>
+        <p class="lead">Start from a tier and change what you want. The price updates as you go — and everything you pick comes with you when you send it to us.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight-top">
+      <div class="container">
+        <form class="config" id="config" novalidate>
+
+          <div class="config__steps">
+
+            <!-- Step 1 — base -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">1</span>
+                <span class="config-step__title">Choose your base</span>
+              </legend>
+              <div class="base-grid">
+                <label class="base-option">
+                  <input type="radio" name="tier" value="1" checked />
+                  <span class="base-card">
+                    <img src="assets/images/builds/tier-1.jpg" alt="Okinos Aqua Uno compact case with panoramic glass front" loading="lazy" />
+                    <span class="base-card__body">
+                      <span class="base-card__name">Tier 1 · Everyday</span>
+                      <span class="base-card__spec">RTX 3060 · Ryzen 5 3600</span>
+                      <span class="base-card__price">S$900</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="base-option">
+                  <input type="radio" name="tier" value="2" />
+                  <span class="base-card">
+                    <span class="base-card__badge">Most picked</span>
+                    <img src="assets/images/builds/tier-2.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, black" loading="lazy" />
+                    <span class="base-card__body">
+                      <span class="base-card__name">Tier 2 · Performance</span>
+                      <span class="base-card__spec">RTX 3070 · Ryzen 5 5600</span>
+                      <span class="base-card__price">S$1,050</span>
+                    </span>
+                  </span>
+                </label>
+
+                <label class="base-option">
+                  <input type="radio" name="tier" value="3" />
+                  <span class="base-card">
+                    <img src="assets/images/builds/tier-3.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, white" loading="lazy" />
+                    <span class="base-card__body">
+                      <span class="base-card__name">Tier 3 · Enthusiast</span>
+                      <span class="base-card__spec">RTX 3080 · Ryzen 5 5600X</span>
+                      <span class="base-card__price">S$1,300</span>
+                    </span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Step 2 — storage + lighting -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">2</span>
+                <span class="config-step__title">Storage and lighting</span>
+              </legend>
+
+              <div class="opt-group">
+                <p class="opt-label">Storage</p>
+                <div class="pills">
+                  <label class="pill"><input type="radio" name="storage" value="1tb" checked /><span>1TB NVMe<em>included</em></span></label>
+                  <label class="pill"><input type="radio" name="storage" value="500gb" /><span>500GB NVMe<em>−S$40</em></span></label>
+                </div>
+              </div>
+
+              <div class="opt-group">
+                <p class="opt-label">Lighting</p>
+                <div class="pills">
+                  <label class="pill"><input type="radio" name="lighting" value="standard" checked /><span>Standard<em>as built</em></span></label>
+                  <label class="pill"><input type="radio" name="lighting" value="rgb" /><span>RGB sync<em>+S$30</em></span></label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Step 3 — case -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">3</span>
+                <span class="config-step__title">Case</span>
+              </legend>
+              <div class="pills" id="case-pills">
+                <label class="pill"><input type="radio" name="case" value="stock" checked /><span id="case-stock">Aqua Uno<em>included</em></span></label>
+                <label class="pill"><input type="radio" name="case" value="alt" /><span id="case-alt">DarkFlash DS900M<em>+S$10</em></span></label>
+              </div>
+              <p class="opt-hint" id="case-hint">Tier 1 ships in the Aqua Uno — the DS900M is +S$10.</p>
+            </fieldset>
+
+            <!-- Step 4 — monitor -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">4</span>
+                <span class="config-step__title">Monitor</span>
+              </legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="monitor" value="none" checked /><span>No monitor<em>bring your own</em></span></label>
+                <label class="pill"><input type="radio" name="monitor" value="yes" /><span>27" 1440p 180Hz<em>+S$165</em></span></label>
+              </div>
+              <p class="opt-hint">A 27-inch 2K 180Hz panel, set up and colour-checked with the machine.</p>
+            </fieldset>
+
+            <!-- Step 5 — warranty -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">5</span>
+                <span class="config-step__title">Warranty</span>
+              </legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="warranty" value="none" checked /><span>No warranty<em>S$75 diagnostic if anything happens</em></span></label>
+                <label class="pill"><input type="radio" name="warranty" value="6m" /><span>6 months<em id="warranty-6m">+S$100</em></span></label>
+                <label class="pill"><input type="radio" name="warranty" value="12m" /><span>1 year<em id="warranty-12m">+S$150</em></span></label>
+              </div>
+              <p class="opt-hint">Covers the whole computer: free diagnostic, and one replacement per part within the term.</p>
+            </fieldset>
+
+            <!-- Step 6 — extras -->
+            <fieldset class="config-step">
+              <legend>
+                <span class="config-step__num">6</span>
+                <span class="config-step__title">Extras</span>
+              </legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="windows" value="no" checked /><span>No Windows<em>bring your own</em></span></label>
+                <label class="pill"><input type="radio" name="windows" value="yes" /><span>Windows 11 activation<em>+S$100</em></span></label>
+              </div>
+              <p class="opt-hint">Anything not listed — more RAM, a second drive, a different GPU — message us and we'll quote it.</p>
+            </fieldset>
+
+          </div>
+
+          <!-- Summary -->
+          <aside class="summary" aria-live="polite">
+            <p class="summary__label">Your build</p>
+            <ul class="summary__list" id="summary-list"></ul>
+            <p class="summary__total"><span>Estimated total</span><strong id="summary-total">S$900</strong></p>
+            <p class="summary__note">A deposit secures the build; the balance is due on collection. Final price confirmed in writing before anything is ordered.</p>
+            <button type="button" class="btn btn-primary btn-block" id="copy-spec">Copy this spec</button>
+            <a href="contact.html" class="btn btn-outline btn-block">Send it to us</a>
+            <p class="summary__copied" id="copy-note" hidden>Copied — paste it into WhatsApp or email.</p>
+          </aside>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-cta">
+      <div class="container cta">
+        <span class="eyebrow">Not sure?</span>
+        <h2>Tell us the games instead</h2>
+        <p class="lead">If you'd rather not pick parts, send us what you play and your budget — we'll spec it and quote it.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Get a quote</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p><span class="brand-footer">Bingan <span>PCs</span></span> · &copy; <span id="year"></span> All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/configurator.js"></script>
+</body>
+</html>
