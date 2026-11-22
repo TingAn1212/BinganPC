@@ -3,109 +3,253 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="PowerCyclePC — custom PC builds, upgrades, and repairs, hand-made in our workshop." />
-  <title>Home — PowerCyclePC</title>
+  <title>Bingan PCs — Custom gaming PCs, built by hand in Singapore</title>
+  <meta name="description" content="Custom gaming PCs built by hand in Singapore from tested, refurbished parts. Only the CPU and GPU are used — everything else is new. 1TB NVMe standard, from S$900." />
+  <link rel="canonical" href="https://devastator165.github.io/PowerCyclePC/" />
+  <meta name="theme-color" content="#0b0b0d" />
 
-  <link rel="icon" type="image/png" href="assets/icons/favicon.png" />
+  <meta property="og:title" content="Bingan PCs — Custom gaming PCs, built by hand" />
+  <meta property="og:description" content="Only the CPU and GPU are used. Everything else is new. 1TB NVMe standard, from S$900." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://devastator165.github.io/PowerCyclePC/" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand">PowerCycle<span>PC</span></a>
-      
-      <!-- Hamburger Toggle for Mobile -->
+      <a href="index.html" class="brand">Bingan <span>PCs</span></a>
+
       <nav class="nav-toggle" aria-label="Menu toggle">
-        <button type="button" id="navToggle">
+        <button type="button" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
           <img src="assets/images/down arrow.png" alt="" class="nav-arrow" />
         </button>
       </nav>
-      
-      <nav class="main-nav" aria-label="Main navigation">
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <!-- <a href="about.html">About Us</a> -->
       </nav>
     </div>
   </header>
 
-  <main>
-    <!-- Home hero -->
+  <main id="main">
     <section class="hero">
       <div class="container">
-        <span class="eyebrow">Custom PC workshop</span>
-        <h1>Built by hand. Tuned by heart.</h1>
-        <p class="lead">Budget-friendly Gaming PCs, with full customization from a small workshop that treats every build like its own.</p>
+        <span class="eyebrow">Custom PC workshop · Singapore</span>
+        <h1>Built by hand.<br />Tuned by heart.</h1>
+        <p class="lead">Budget-friendly gaming PCs from a small workshop that treats every build like its own — tested part by part, cleaned, and tuned before it reaches you.</p>
         <div class="hero-actions">
-          <a href="products.html" class="btn btn-primary">See the products</a>
-          <a href="contact.html" class="btn btn-outline">Get in touch</a>
+          <a href="products.html" class="btn btn-primary">See the builds</a>
+          <a href="contact.html" class="btn btn-outline">Get a quote</a>
         </div>
       </div>
       <div class="container hero-media">
-             <img class="hero-image" src="assets/images/temp.png" alt="..." />
-        <div class="img-placeholder" style="--ph-ratio: 21 / 9">
-          <span class="img-placeholder__label">Image placeholder</span>
-          <span class="img-placeholder__meta">Hero photo · 21:9 · assets/images/hero.jpg</span>
+        <img class="hero-image" src="assets/images/hero.jpg" alt="A DarkFlash DS900M gaming PC with tempered glass panels and ARGB fans" width="2100" height="900" fetchpriority="high" />
+        <div class="hero-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <path d="M18 3 7 18h6l-1 11 12-16h-6l1-10z" fill="#d4af37" stroke="#a8811f" stroke-width="1.2" stroke-linejoin="round"/>
+          </svg>
+          <span>Bingan <em>PCs</em></span>
         </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>FurMark + Cinebench</strong><span>Loaded hard before it ships</span></div>
+        <div class="trust-item"><strong>Delivered and set up</strong><span>At your desk, running, before we leave</span></div>
+        <div class="trust-item"><strong>Warranty card included</strong><span>With its own test certificate</span></div>
+        <div class="trust-item"><strong>1TB NVMe standard</strong><span>No paid storage upgrade on any tier</span></div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow">Ultra Budget</span>
-          <h2>Ultra Performance</h2>
-          <p class="lead">To deliver the best price-to-value ratio, we source second-hand components and refurbish them to like-new condition. Every part is individually tested and guaranteed.</p>
+          <span class="eyebrow">Why it costs less</span>
+          <h2>Only two parts are second-hand</h2>
+          <p class="lead">A used machine is cheap because everything in it is old. Ours isn't. We buy the CPU and GPU second-hand — the two parts where the saving is real — and build the rest of the machine new.</p>
         </div>
-        <div class="card-grid">
-          <article class="card">
-            <img class="hero-image" src="assets/images/temp.png" alt="..." />
-            <div class="card-media">
-              <div class="img-placeholder"><span class="img-placeholder__label">Image placeholder</span><span class="img-placeholder__meta">Gaming build · 4:3</span></div>
-            </div>
+
+        <div class="split-2">
+          <article class="panel">
+            <h3 class="panel__title">New in every build</h3>
+            <ul class="checklist">
+              <li>Motherboard, RAM and NVMe SSD</li>
+              <li>Power supply, cooler and case</li>
+              <li>Fans, cabling and Windows install</li>
+            </ul>
+          </article>
+          <article class="panel panel--muted">
+            <h3 class="panel__title">Tested second-hand</h3>
+            <ul class="checklist checklist--dim">
+              <li>CPU — checked under sustained load</li>
+              <li>GPU — checked for artefacts, thermals and fans</li>
+              <li>Tested, cleaned and serviced before it goes in</li>
+            </ul>
           </article>
         </div>
+
+        <p class="footnote">That's the difference between us and a flipper: a flipper sells you a whole used machine. You're buying a new machine with two carefully chosen used parts in it — and it looks the part, because the case is new too.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Looks new</span>
-          <h2>Costs less</h2>
-          <p class="lead">Reused on the inside, brand new on the outside.</p>
-          <p class="lead">We guarantee that components like casing are always brand new, your build will look pristine when delivered.</p>
-        </div>
-        <div class="card-grid">
-          <article class="card">
-            <img class="hero-image" src="assets/images/temp.png" alt="..." />
-            <div class="card-media">
-              <div class="img-placeholder"><span class="img-placeholder__label">Image placeholder</span><span class="img-placeholder__meta">Gaming build · 4:3</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Call to action -->
     <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">The line-up</span>
+          <h2>Three builds to start from</h2>
+          <p class="lead">Pick the one that matches how you play. Everything can be changed — these are starting points, not fixed boxes.</p>
+        </div>
+
+        <div class="tier-teaser">
+          <a class="teaser" href="products.html#tier-1">
+            <span class="teaser__label">Tier 1 · Everyday</span>
+            <span class="teaser__price">S$900</span>
+            <span class="teaser__spec">RTX 3060 · Ryzen 5 3600 · 16GB · 1TB</span>
+            <span class="teaser__note">1080p high refresh, 1440p at 60</span>
+            <span class="teaser__cta">See details</span>
+          </a>
+          <a class="teaser teaser--featured" href="products.html#tier-2">
+            <span class="teaser__badge">Most picked</span>
+            <span class="teaser__label">Tier 2 · Performance</span>
+            <span class="teaser__price">S$1,050</span>
+            <span class="teaser__spec">RTX 3070 · Ryzen 5 5600 · 16GB · 1TB</span>
+            <span class="teaser__note">1440p high refresh, built to last</span>
+            <span class="teaser__cta">See details</span>
+          </a>
+          <a class="teaser" href="products.html#tier-3">
+            <span class="teaser__label">Tier 3 · Enthusiast</span>
+            <span class="teaser__price">S$1,300</span>
+            <span class="teaser__spec">RTX 3080 · Ryzen 5 5600X · 16GB · 1TB</span>
+            <span class="teaser__note">High-refresh 1440p and streaming</span>
+            <span class="teaser__cta">See details</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Customer builds</span>
+          <h2>Machines that left the bench</h2>
+          <p class="lead">Not stock photos — these are customers' own machines, photographed here before handover.</p>
+        </div>
+
+        <div class="gallery">
+          <figure>
+            <img src="assets/images/builds/g1.jpg" alt="White gaming PC with rainbow RGB fans and a pink graphics card cover" width="900" height="1200" />
+            <figcaption>Aurora<span>White 2070 Super · pink GPU cover</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/builds/g2.jpg" alt="Black tempered-glass gaming PC with blue RGB lighting" width="900" height="1200" />
+            <figcaption>Midnight<span>Black RTX 3070 · Aqua Uno</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/builds/g3.jpg" alt="Inside a black gaming PC showing the CPU cooler and graphics card" width="900" height="1200" />
+            <figcaption>Inside Midnight<span>Cleaned and serviced, cables routed behind the board</span></figcaption>
+          </figure>
+          <figure>
+            <img src="assets/images/builds/g4.jpg" alt="White ATX gaming PC on a stand lit with rainbow RGB" width="900" height="1200" />
+            <figcaption>Aurora, whole case<span>Aqua Uno · white cooler</span></figcaption>
+          </figure>
+        </div>
+
+        <p class="footnote">Every machine gets photographed before it leaves the bench — if you want to see a specific build in progress, ask and we'll send photos.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How it works</span>
+          <h2>From message to machine</h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">01</span>
+            <h3>Tell us what you play</h3>
+            <p>The games, your monitor, and your budget. That's all we need to start.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">02</span>
+            <h3>We quote it properly</h3>
+            <p>A fixed price for the exact parts, not a range. You approve before we buy anything.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">03</span>
+            <h3>We build and test</h3>
+            <p>Assembled, cable-managed, then FurMark, Cinebench and a real game run. Usually about a week from parts in hand.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">04</span>
+            <h3>We deliver and set up</h3>
+            <p>Doorstep delivery and setup: plugged in, Windows updated, your games installed and running before we leave.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container narrow">
+        <div class="section-head">
+          <span class="eyebrow">Questions</span>
+          <h2>The things people ask first</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Is a used GPU safe to buy?</summary>
+            <p>It depends on which one. We test every card for artefacts under load, check the fans and thermals, and give it a clean and service before it goes in. If a card doesn't pass, we don't sell it — that's why we buy them one at a time instead of by the pallet.</p>
+          </details>
+          <details>
+            <summary>What if something fails?</summary>
+            <p>Every build is burned in before handover, so most faults surface before the machine reaches you. If a part fails afterwards, talk to us — we'd rather fix it than argue about it.</p>
+          </details>
+          <details>
+            <summary>Can I change the parts?</summary>
+            <p>Yes. Different case, more storage, RGB, a bigger GPU — the three tiers are starting points. Tell us the budget and we'll tell you honestly what it buys.</p>
+          </details>
+          <details>
+            <summary>Do you do repairs and upgrades?</summary>
+            <p>Yes — cleaning, re-pasting, storage upgrades, GPU swaps, and diagnosing machines that won't boot. Same workshop, same people.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-cta">
       <div class="container cta">
         <span class="eyebrow">Don't know where to start?</span>
-        <h2>Start with our recommended templates</h2>
-        <p class="lead">Use the template tiers to set your desired performance level and budget.</p>
-        <p class="lead">Have a chat with us to discuss your specific customization needs.</p>
+        <h2>Send us the games you play</h2>
+        <p class="lead">We'll tell you what actually matters for them, what doesn't, and what it costs — no obligation.</p>
         <div class="hero-actions">
-          <a href="products.html" class="btn btn-primary">Templates & Pricing</a>
-          <a href="contact.html" class="btn btn-outline">Customizations</a>
+          <a href="contact.html" class="btn btn-primary btn-lg">Get a quote</a>
+          <a href="products.html" class="btn btn-outline btn-lg">Compare the tiers</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p><span class="brand-footer">PowerCyclePC</span> · &copy; <span id="year"></span> All rights reserved.</p>
+    <div class="container footer-inner">
+      <p><span class="brand-footer">Bingan <span>PCs</span></span> · &copy; <span id="year"></span> All rights reserved.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="products.html">Products</a>
+        <a href="build.html">Build yours</a>
+        <a href="warranty.html">Warranty</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 
