@@ -1,0 +1,8 @@
+# Bingan PCs — robots.txt
+# PLACEHOLDER: replace https://example.com with the final production domain
+# before launch. Keep it identical to the canonical base in every HTML file.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://example.com/sitemap.xml

@@ -25,3 +25,7 @@ out/
 .env.*.local
 
 context.txt
+
+# SEO working documents (planning and change log are local-only)
+SEO Plan.txt
+SEO Changes.md

@@ -1,15 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Build your PC — Bingan PCs</title>
-  <meta name="description" content="Configure your gaming PC part by part: pick a tier, storage, lighting, case and Windows. See the price change as you go, then send us the spec." />
-  <link rel="canonical" href="https://devastator165.github.io/PowerCyclePC/build.html" />
+  <title>Build a Budget Gaming PC | Configurator — Bingan PCs</title>
+  <meta name="description" content="Configure your budget gaming PC part by part: tier, storage, RGB, case, monitor and warranty. See the Singapore price update live, then send us the spec." />
+  <link rel="canonical" href="https://example.com/build.html" />
   <meta name="theme-color" content="#0b0b0d" />
+  <meta name="geo.region" content="SG" />
+  <meta name="geo.placename" content="Singapore" />
+
+  <meta property="og:site_name" content="Bingan PCs" />
+  <meta property="og:title" content="Build a Budget Gaming PC | Configurator — Bingan PCs" />
+  <meta property="og:description" content="Configure your budget gaming PC part by part: tier, storage, RGB, case, monitor and warranty. See the Singapore price update live, then send us the spec." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/build.html" />
+  <meta property="og:locale" content="en_SG" />
+  <meta property="og:image" content="https://example.com/assets/images/og/bingan-pcs-budget-gaming-pc-singapore.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Build a Budget Gaming PC | Configurator — Bingan PCs" />
+  <meta name="twitter:description" content="Configure your budget gaming PC part by part: tier, storage, RGB, case, monitor and warranty. See the Singapore price update live, then send us the spec." />
+  <meta name="twitter:image" content="https://example.com/assets/images/og/bingan-pcs-budget-gaming-pc-singapore.jpg" />
 
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://example.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Build a budget gaming PC", "item": "https://example.com/build.html" }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -20,7 +47,7 @@
 
       <nav class="nav-toggle" aria-label="Menu toggle">
         <button type="button" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Open menu">
-          <img src="assets/images/down arrow.png" alt="" class="nav-arrow" />
+          <img src="assets/images/down arrow.png" alt="" width="16" height="16" class="nav-arrow" />
         </button>
       </nav>
 
@@ -30,17 +57,25 @@
         <a href="build.html" aria-current="page">Build yours</a>
         <a href="warranty.html">Warranty</a>
         <a href="about.html">About</a>
+        <a href="guides/index.html">Guides</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
   <main id="main">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Build a budget gaming PC</li>
+      </ol>
+    </nav>
+
     <section class="hero hero--compact">
       <div class="container">
         <span class="eyebrow">Configurator</span>
         <h1>Build yours</h1>
-        <p class="lead">Start from a tier and change what you want. The price updates as you go — and everything you pick comes with you when you send it to us.</p>
+        <p class="lead">Start from a tier and change what you want — storage, lighting, case, monitor and warranty. The price updates as you go, and everything you pick comes with you when you send it to us.</p>
       </div>
     </section>
 
@@ -60,7 +95,7 @@
                 <label class="base-option">
                   <input type="radio" name="tier" value="1" checked />
                   <span class="base-card">
-                    <img src="assets/images/builds/tier-1.jpg" alt="Okinos Aqua Uno compact case with panoramic glass front" loading="lazy" />
+                    <img src="assets/images/builds/budget-gaming-pc-rtx-3060-aqua-uno.jpg" alt="Tier 1 budget gaming PC in Singapore: Okinos Aqua Uno compact case" width="1200" height="900" loading="lazy" decoding="async" />
                     <span class="base-card__body">
                       <span class="base-card__name">Tier 1 · Everyday</span>
                       <span class="base-card__spec">RTX 3060 · Ryzen 5 3600</span>
@@ -73,7 +108,7 @@
                   <input type="radio" name="tier" value="2" />
                   <span class="base-card">
                     <span class="base-card__badge">Most picked</span>
-                    <img src="assets/images/builds/tier-2.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, black" loading="lazy" />
+                    <img src="assets/images/builds/budget-gaming-pc-rtx-3070-darkflash-ds900m.jpg" alt="Tier 2 budget gaming PC in Singapore: black DarkFlash DS900M case" width="1200" height="900" loading="lazy" decoding="async" />
                     <span class="base-card__body">
                       <span class="base-card__name">Tier 2 · Performance</span>
                       <span class="base-card__spec">RTX 3070 · Ryzen 5 5600</span>
@@ -85,7 +120,7 @@
                 <label class="base-option">
                   <input type="radio" name="tier" value="3" />
                   <span class="base-card">
-                    <img src="assets/images/builds/tier-3.jpg" alt="DarkFlash DS900M panoramic tempered-glass case, white" loading="lazy" />
+                    <img src="assets/images/builds/budget-gaming-pc-rtx-3080-darkflash-ds900m.jpg" alt="Tier 3 budget gaming PC in Singapore: white DarkFlash DS900M case" width="1200" height="900" loading="lazy" decoding="async" />
                     <span class="base-card__body">
                       <span class="base-card__name">Tier 3 · Enthusiast</span>
                       <span class="base-card__spec">RTX 3080 · Ryzen 5 5600X</span>
@@ -208,6 +243,7 @@
         <a href="build.html">Build yours</a>
         <a href="warranty.html">Warranty</a>
         <a href="about.html">About</a>
+        <a href="guides/index.html">Guides</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
