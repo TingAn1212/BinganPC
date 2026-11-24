@@ -1,16 +1,16 @@
 /* Bingan PCs — configurator.js
    Prices mirror the `New Pricing` tab in the resale workbook (2026-11-20):
    tiers 900 / 1,050 / 1,300 · 500GB −40 · RGB +30 · DS900M +10 (Tier 1 only) ·
-   monitor 165 · Windows +100. Warranty is priced per tier: 6 months / 1 year.
+   monitor 165 · Windows +100. Warranty: 6 months S$80 / 1 year S$150, the same on every tier.
    If the tab changes, these numbers change with it — there is no other source. */
 
 const TIERS = {
   "1": { name: "Tier 1 · Everyday", price: 900, spec: "RTX 3060 · Ryzen 5 3600 · 16GB · 1TB",
-         case: "Aqua Uno", warranty: { "6m": 100, "12m": 150 } },
+         case: "Aqua Uno", warranty: { "6m": 80, "12m": 150 } },
   "2": { name: "Tier 2 · Performance", price: 1050, spec: "RTX 3070 · Ryzen 5 5600 · 16GB · 1TB",
-         case: "DarkFlash DS900M", warranty: { "6m": 150, "12m": 200 } },
+         case: "DarkFlash DS900M", warranty: { "6m": 80, "12m": 150 } },
   "3": { name: "Tier 3 · Enthusiast", price: 1300, spec: "RTX 3080 · Ryzen 5 5600X · 16GB · 1TB",
-         case: "DarkFlash DS900M", warranty: { "6m": 200, "12m": 250 } },
+         case: "DarkFlash DS900M", warranty: { "6m": 80, "12m": 150 } },
 };
 
 const MONITOR_PRICE = 165;
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
       { label: "Monitor", value: val("monitor") === "yes" ? '27" 1440p 180Hz' : "None",
         amount: val("monitor") === "yes" ? MONITOR_PRICE : 0 },
       { label: "Warranty",
-        value: warn === "none" ? "None — S$75 diagnostic if needed" : warn === "6m" ? "6 months" : "1 year",
+        value: warn === "none" ? "None — S$50 diagnostic if needed" : warn === "6m" ? "6 months" : "1 year",
         amount: warnAmount },
       { label: "Windows", value: val("windows") === "yes" ? "Windows 11 activation" : "Not included",
         amount: val("windows") === "yes" ? 100 : 0 },
