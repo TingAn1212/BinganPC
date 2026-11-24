@@ -1,8 +1,8 @@
 # Bingan PCs — robots.txt
-# PLACEHOLDER: replace https://example.com with the final production domain
+# Production domain set 2026-11-24 (binganpc.com) — keep in step with rel=canonical.
 # before launch. Keep it identical to the canonical base in every HTML file.
 
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://binganpc.com/sitemap.xml
