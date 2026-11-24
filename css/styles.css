@@ -579,6 +579,7 @@ a { color: var(--color-gold-light); }
   .hero h1 { font-size: clamp(1.9rem, 9vw, 2.6rem); }
   .hero .lead { font-size: 1rem; }
   .container { padding-inline: 1.15rem; }
+  .article { padding-inline: 1.15rem; }
   .case-card__body { padding: var(--space-2); }
   .btn { padding: 0.75rem 1.2rem; }
   .hero-actions .btn { flex: 1 1 auto; }
