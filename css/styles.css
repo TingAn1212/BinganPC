@@ -98,6 +98,21 @@ a { color: var(--color-gold-light); }
 .article__meta { color: var(--color-gold); font-size: 0.82rem; letter-spacing: 0.06em; margin-bottom: var(--space-3); }
 .article figure { margin: var(--space-3) 0; }
 .article figure img { width: 100%; border-radius: var(--radius); border: 1px solid var(--color-line-soft); }
+.article figure img.img--component { display: block; max-width: 560px; margin-inline: auto; }
+.article figcaption { margin-top: 0.45rem; color: var(--color-text-dim); font-size: 0.78rem; line-height: 1.45; }
+.article .perf-compare { margin: var(--space-3) 0; padding: var(--space-3); border: 1px solid var(--color-line-soft); border-radius: var(--radius); background: var(--color-surface-raised); }
+.article .perf-row { display: grid; grid-template-columns: 160px 1fr 58px; gap: 0.75rem; align-items: center; margin-bottom: 0.85rem; color: var(--color-text); font-size: 0.88rem; }
+.article .perf-row:last-of-type { margin-bottom: 0; }
+.article .perf-track { height: 12px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; }
+.article .perf-bar { display: block; height: 100%; border-radius: inherit; }
+.article .perf-bar--igpu { background: #8f96a3; }
+.article .perf-bar--dgpu { background: var(--color-gold); }
+.article .perf-value { text-align: right; color: var(--color-gold); font-weight: 600; }
+.article .perf-note { margin-top: 1rem; font-size: 0.78rem; }
+@media (max-width: 560px) {
+  .article .perf-row { grid-template-columns: 1fr 58px; }
+  .article .perf-track { grid-column: 1 / -1; grid-row: 2; }
+}
 .article .faq { margin-top: var(--space-2); }
 .article__cta { margin-top: var(--space-4); padding: var(--space-3); border: 1px dashed var(--color-line); border-radius: var(--radius); background: rgba(212, 175, 55, 0.04); text-align: center; }
 .article__cta p { color: var(--color-text-dim); margin-bottom: var(--space-2); }
@@ -364,11 +379,11 @@ a { color: var(--color-gold-light); }
 /* ==========================================================================
    About page
    ========================================================================== */
-.split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: var(--space-4); align-items: center; }
-@media (max-width: 860px) { .split { grid-template-columns: 1fr; } }
+.split { display: grid; grid-template-columns: 1fr; gap: var(--space-4); align-items: start; }
+.story { max-width: 70ch; }
 .story p { color: var(--color-text-dim); }
 .story h2 { margin-bottom: var(--space-2); }
-.story-media img { width: 100%; border-radius: var(--radius); border: 1px solid var(--color-line-soft); }
+.story-media img { display: block; width: 100%; max-width: 860px; margin-inline: auto; border-radius: var(--radius); border: 1px solid var(--color-line-soft); }
 
 /* ==========================================================================
    Build photography
