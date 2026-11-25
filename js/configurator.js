@@ -1,7 +1,8 @@
 /* Bingan PCs — configurator.js
    Prices mirror the `New Pricing` tab in the resale workbook (2026-11-20):
    tiers 900 / 1,050 / 1,300 · 500GB −40 · RGB +30 · DS900M +10 (Tier 1 only) ·
-   monitor 165 · Windows +100. Warranty: 6 months S$80 / 1 year S$150, the same on every tier.
+   monitor 165 · Windows S$155, free during the Holiday Sale. Warranty:
+   6 months S$80 / 1 year S$150, the same on every tier.
    If the tab changes, these numbers change with it — there is no other source. */
 
 const TIERS = {
@@ -14,6 +15,8 @@ const TIERS = {
 };
 
 const MONITOR_PRICE = 165;
+const WINDOWS_PRICE = 155;
+const WINDOWS_SALE_TEXT = "Free (Holiday Sale)";
 const CASE_UPGRADE = 10;   // Tier 1 -> DS900M
 const CASE_DOWNGRADE = -5; // Tier 2/3 -> Aqua Uno ("Lite case")
 
@@ -61,7 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
         value: warn === "none" ? "None — S$50 diagnostic if needed" : warn === "6m" ? "6 months" : "1 year",
         amount: warnAmount },
       { label: "Windows", value: val("windows") === "yes" ? "Windows 11 activation" : "Not included",
-        amount: val("windows") === "yes" ? 100 : 0 },
+        amount: 0,
+        struck: val("windows") === "yes" ? WINDOWS_PRICE : null,
+        sale: val("windows") === "yes" ? WINDOWS_SALE_TEXT : null },
     ];
     return { tier: t, lines, total: lines.reduce((s, l) => s + l.amount, 0) };
   }
@@ -71,7 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     list.innerHTML = lines
       .map((l) => {
-        const delta = !l.amount ? "" : l.isBase ? money(l.amount) : `${l.amount > 0 ? "+" : ""}${money(l.amount)}`;
+        const delta = l.sale
+          ? `<s class="price-was">${money(l.struck)}</s> <span class="sale-text">${l.sale}</span>`
+          : !l.amount ? "" : l.isBase ? money(l.amount) : `${l.amount > 0 ? "+" : ""}${money(l.amount)}`;
         return `<li><span>${l.label}</span><b>${l.value}</b>${delta ? `<i>${delta}</i>` : ""}</li>`;
       })
       .join("");
@@ -101,7 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function specText() {
     const { tier, lines, total } = current();
     const body = lines
-      .map((l) => `- ${l.label}: ${l.value}${l.amount && !l.isBase ? ` (${l.amount > 0 ? "+" : ""}${money(l.amount)})` : ""}`)
+      .map((l) => {
+        const suffix = l.sale
+          ? ` (${money(l.struck)} — ${l.sale})`
+          : l.amount && !l.isBase ? ` (${l.amount > 0 ? "+" : ""}${money(l.amount)})` : "";
+        return `- ${l.label}: ${l.value}${suffix}`;
+      })
       .join("\n");
     return `Hi Bingan PCs, I'd like this build:\n\n${body}\n\nEstimated total: ${money(total)}\n\n(${tier.spec})`;
   }
