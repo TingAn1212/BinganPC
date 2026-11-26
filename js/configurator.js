@@ -1,4 +1,4 @@
-/* Bingan PCs — configurator.js
+/* BingAn PCs — configurator.js
    Prices mirror the `New Pricing` tab in the resale workbook (2026-11-20):
    tiers 900 / 1,050 / 1,300 · 500GB −40 · RGB +30 · DS900M +25 (Tier 1 only) ·
    Aqua Uno has no price change on Tiers 2 and 3 · monitor 165 · Windows S$155,
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return `- ${l.label}: ${l.value}${suffix}`;
       })
       .join("\n");
-    return `Hi Bingan PCs, I'd like this build:\n\n${body}\n\nEstimated total: ${money(total)}\n\n(${tier.spec})`;
+    return `Hi BingAn PCs, I'd like this build:\n\n${body}\n\nEstimated total: ${money(total)}\n\n(${tier.spec})`;
   }
 
   form.addEventListener("change", render);

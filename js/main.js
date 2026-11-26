@@ -1,4 +1,4 @@
-/* Bingan PCs — main.js
+/* BingAn PCs — main.js
    Entry point for site behavior. Keep individual features in separate files
    (see js/modules/) and import or include them here as the site grows. */
 
