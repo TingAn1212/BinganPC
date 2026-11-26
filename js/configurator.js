@@ -1,9 +1,9 @@
 /* Bingan PCs — configurator.js
    Prices mirror the `New Pricing` tab in the resale workbook (2026-11-20):
-   tiers 900 / 1,050 / 1,300 · 500GB −40 · RGB +30 · DS900M +10 (Tier 1 only) ·
-   monitor 165 · Windows S$155, free during the Holiday Sale. Warranty:
-   6 months S$80 / 1 year S$150, the same on every tier.
-   If the tab changes, these numbers change with it — there is no other source. */
+   tiers 900 / 1,050 / 1,300 · 500GB −40 · RGB +30 · DS900M +25 (Tier 1 only) ·
+   Aqua Uno has no price change on Tiers 2 and 3 · monitor 165 · Windows S$155,
+   free during the Holiday Sale. Warranty: 6 months S$80 / 1 year S$150, the
+   same on every tier. If the tab changes, these numbers change with it. */
 
 const TIERS = {
   "1": { name: "Tier 1 · Everyday", price: 900, spec: "RTX 3060 · Ryzen 5 3600 · 16GB · 1TB",
@@ -17,8 +17,7 @@ const TIERS = {
 const MONITOR_PRICE = 165;
 const WINDOWS_PRICE = 155;
 const WINDOWS_SALE_TEXT = "Free (Holiday Sale)";
-const CASE_UPGRADE = 10;   // Tier 1 -> DS900M
-const CASE_DOWNGRADE = -5; // Tier 2/3 -> Aqua Uno ("Lite case")
+const CASE_UPGRADE = 25; // Tier 1 -> DS900M; Aqua Uno stays same price on Tiers 2 and 3
 
 const money = (n) => (n < 0 ? `−S$${Math.abs(n)}` : `S$${n.toLocaleString("en-SG")}`);
 
@@ -43,12 +42,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const tier = val("tier") || "1";
     const t = TIERS[tier];
     const warn = val("warranty") || "none";
-    // Tier 1 ships in the Aqua Uno (DS900M is an upgrade); Tiers 2 and 3 ship in
-    // the DS900M and can drop to the Aqua Uno, which costs S$5 less.
+    // Tier 1 ships in the Aqua Uno; the DS900M is a S$25 upgrade. Tiers 2 and 3
+    // ship in the DS900M and can switch to the Aqua Uno at the same price.
     const isTier1 = tier === "1";
     const altCase = val("case") === "alt";
-    const caseDelta = altCase ? (isTier1 ? CASE_UPGRADE : CASE_DOWNGRADE) : 0;
-    const caseName = altCase ? (isTier1 ? "DarkFlash DS900M" : "Aqua Uno (Lite case)") : t.case;
+    const caseDelta = altCase && isTier1 ? CASE_UPGRADE : 0;
+    const caseName = altCase ? (isTier1 ? "DarkFlash DS900M" : "Aqua Uno") : t.case;
     const warnAmount = warn === "none" ? 0 : t.warranty[warn];
 
     const lines = [
@@ -96,11 +95,11 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "Aqua Uno<em>included</em>"
         : "DarkFlash DS900M<em>included</em>";
       if (alt) alt.innerHTML = tier1
-        ? "DarkFlash DS900M<em>+S$10</em>"
-        : "Aqua Uno (Lite case)<em>−S$5</em>";
+        ? "DarkFlash DS900M<em>+S$25</em>"
+        : "Aqua Uno<em>your pick</em>";
       if (caseHint) caseHint.textContent = tier1
-        ? "Tier 1 ships in the Aqua Uno — the DS900M is +S$10."
-        : "Tiers 2 and 3 ship in the DS900M — dropping to the Aqua Uno takes S$5 off.";
+        ? "Tier 1 ships in the Aqua Uno — the DS900M is +S$25."
+        : "Tiers 2 and 3 ship in the DS900M — the Aqua Uno is also available at the same price.";
     }
     if (copyNote) copyNote.hidden = true;
   }
