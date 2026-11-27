@@ -139,10 +139,10 @@ a { color: var(--color-gold-light); }
   position: absolute; left: 9%; top: 50%; transform: translateY(-50%);
   display: flex; align-items: center; gap: 0.9rem; pointer-events: none;
 }
-.hero-mark svg { width: 58px; height: 58px; filter: drop-shadow(0 2px 10px rgba(0,0,0,.25)); }
+.hero-mark img { width: 58px; height: 58px; display: block; border-radius: 8px; filter: drop-shadow(0 2px 10px rgba(0,0,0,.25)); }
 .hero-mark span { font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 700; letter-spacing: -0.02em; color: #17130a; }
 .hero-mark em { font-style: normal; color: #a8811f; }
-@media (max-width: 760px) { .hero-mark { left: 6%; gap: 0.5rem; } .hero-mark svg { width: 34px; height: 34px; } }
+@media (max-width: 760px) { .hero-mark { left: 6%; gap: 0.5rem; } .hero-mark img { width: 34px; height: 34px; } }
 .hero-image { width: 100%; border-radius: var(--radius); border: 1px solid var(--color-line-soft); }
 
 /* ---------- Buttons ---------- */
